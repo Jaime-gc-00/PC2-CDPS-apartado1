@@ -9,7 +9,7 @@ import json
 import os
 
 cwd = str(os.getcwd())
-puerto_de_arranque = str(2022)
+puerto_de_arranque = str(9080)
 
 #CREAMOS LA VARIABLE DE ENTORNO
 os.environ['GROUP_NUMBER']="Equipo 40"
