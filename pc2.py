@@ -31,7 +31,7 @@ requirements = open(cwd+"/practica_creativa2/bookinfo/src/productpage/requiremen
 for line in requirements:
     call(["pip3 install -y " + line ], shell=True)
 
-#MODIFICA EL TITULO Y ARRANCA LA APLICACION EN EL PUERTO :9999
+#MODIFICA EL TITULO Y ARRANCA LA APLICACION EN EL PUERTO :9080
 call(['cp '+cwd+'/practica_creativa2/bookinfo/src/productpage/templates/productpage.html '+cwd+'/practica_creativa2/bookinfo/src/productpage/templates/productpage2.html'], shell=True)
 copia = open( cwd + '/practica_creativa2/bookinfo/src/productpage/templates/productpage2.html', 'r')
 f = open( cwd + '/practica_creativa2/bookinfo/src/productpage/templates/productpage.html', 'w')
