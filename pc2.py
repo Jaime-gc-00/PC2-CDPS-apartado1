@@ -16,20 +16,17 @@ os.environ['GROUP_NUMBER']="Equipo 40"
 #OBTENEMOS EL VALOR DE LA VARIABLE DE ENTORNO
 numero_de_grupo = str(os.environ.get('GROUP_NUMBER'))
 
-call(['sudo apt-get update'], shell=True)
-call(['sudo apt-get install -y nano'], shell=True)
-call(['sudo apt-get install -y pip'], shell=True)
-call(["sudo sudo apt-get install -y python3-pip"], shell=True)
+call(['apt-get update'], shell=True)
+call(['apt-get install -y nano'], shell=True)
+call(['apt-get install -y pip'], shell=True)
+call(["apt-get install -y python3-pip"], shell=True)
 
-#Descarga de la aplicacion 
-call(['sudo sudo apt-get install -y nodejs'], shell=True)
-call(['sudo sudo apt-get install -y npm'], shell=True)
-call(['sudo git clone https://github.com/CDPS-ETSIT/practica_creativa2.git'], shell=True)
+#Descarga de la aplicacion
+call(['apt-get install -y git'], shell=True)
+call(['git clone https://github.com/CDPS-ETSIT/practica_creativa2.git'], shell=True)
 
 #INSTALACION DE REQUIRMENTS CON PIP
-requirements = open(cwd+"/practica_creativa2/bookinfo/src/productpage/requirements.txt", 'r')
-for line in requirements:
-    call(["pip3 install -y " + line ], shell=True)
+call(["pip3 install -r "+cwd+"/practica_creativa2/bookinfo/src/productpage/requirements.txt"], shell=True)
 
 #MODIFICA EL TITULO Y ARRANCA LA APLICACION EN EL PUERTO :9080
 call(['cp '+cwd+'/practica_creativa2/bookinfo/src/productpage/templates/productpage.html '+cwd+'/practica_creativa2/bookinfo/src/productpage/templates/productpage2.html'], shell=True)
